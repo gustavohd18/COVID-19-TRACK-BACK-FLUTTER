@@ -23,4 +23,16 @@ class CovidService {
       return Country.fromJSON(response.data);
     }
   }
+
+  Future<List<Country>> countries() async {
+    Response response = await _dio.get('$_url/countries');
+    if (response.statusCode != 200) {
+      throw Exception();
+    } else {
+      var _list = (response.data as List)
+          .map((items) => Country.fromJSON(items))
+          .toList();
+      return _list;
+    }
+  }
 }
