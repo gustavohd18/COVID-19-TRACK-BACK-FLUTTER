@@ -11,8 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends ModularState<HomePage, HomeController> {
-  final TextStyle whiteText = TextStyle(color: Colors.white);
-
   @override
   Widget build(BuildContext context) {
     return Observer(builder: (_) {
@@ -108,8 +106,8 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             title: Text(
               titulo,
               textAlign: TextAlign.center,
-              style: whiteText.copyWith(
-                  fontWeight: FontWeight.bold, fontSize: 20.0),
+              style: TextStyle(color: Colors.white)
+                  .copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),
             ),
           ),
           const SizedBox(height: 5.0),
@@ -126,11 +124,11 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       onTap: this.controller.changePage,
       items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.ac_unit),
+          icon: Icon(Icons.done_all),
           title: Text("Mundo"),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.computer),
+          icon: Icon(Icons.info),
           title: Text("Paises"),
         ),
       ],
