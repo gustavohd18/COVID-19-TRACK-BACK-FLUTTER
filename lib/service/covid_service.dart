@@ -4,10 +4,10 @@ import 'package:dio/dio.dart';
 
 class CovidService {
   final Dio _dio = Dio();
-  String url = "https://corona.lmao.ninja/v2";
+  String _url = "https://corona.lmao.ninja/v2";
 
   Future<World> worlds() async {
-    Response response = await _dio.get('$url/all');
+    Response response = await _dio.get('$_url/all');
     if (response.statusCode != 200) {
       throw Exception();
     } else {
@@ -15,8 +15,8 @@ class CovidService {
     }
   }
 
-  Future<Country> country({String pais}) async {
-    Response response = await _dio.get('$url/countries/$pais');
+  Future<Country> country(String pais) async {
+    Response response = await _dio.get('$_url/countries/$pais');
     if (response.statusCode != 200) {
       throw Exception();
     } else {
