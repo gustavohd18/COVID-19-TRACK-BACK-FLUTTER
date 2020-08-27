@@ -15,8 +15,8 @@ class CovidService {
     }
   }
 
-  Future<Country> country(String pais) async {
-    Response response = await _dio.get('$_url/countries/$pais');
+  Future<Country> country(String country) async {
+    Response response = await _dio.get('$_url/countries/$country');
     if (response.statusCode != 200) {
       throw Exception();
     } else {
