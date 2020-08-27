@@ -124,11 +124,11 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       onTap: this.controller.changePage,
       items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.done_all),
+          icon: Icon(Icons.info),
           title: Text("Mundo"),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.info),
+          icon: Icon(Icons.add),
           title: Text("Paises"),
         ),
       ],

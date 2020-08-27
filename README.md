@@ -1,6 +1,10 @@
-# covid19
+# COVID 19 TRACK BACK
 
-A new Flutter project.
+This is a simple project with goal was learning how use `Flutter module`, `Flutter Mobx`. This app get information about COVID-19 in all world and you can see per country in list. Fell free to contribute. resources https://imasters.com.br/flutter/covid19-api-com-flutter-mobx-e-modular-parte-1
+
+# Screenshot
+<img src="/screenshot/main.png" width = "300" height="300px"/> <img src="/screenshot/splash.png" width = "300" height="300px"/> 
+<img src="/screenshot/list.png" width = "300" height="300px"/> <img src="/screenshot/country.png" width = "300" height="300px"/> 
 
 ## Getting Started
 
