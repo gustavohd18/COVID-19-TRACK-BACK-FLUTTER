@@ -12,12 +12,12 @@ class World {
       this.affectedCountries,
       this.lastUpdated});
 
-  factory World.fromJson(Map doc) {
+  factory World.fromJSON(Map<String, dynamic> json) {
     return World(
-        cases: doc['cases'],
-        deaths: doc['deaths'],
-        recivered: doc['recovered'],
-        affectedCountries: doc['affectedCountries'],
-        lastUpdated: DateTime.fromMillisecondsSinceEpoch(doc['updated']));
+        cases: json['cases'],
+        deaths: json['deaths'],
+        recivered: json['recovered'],
+        affectedCountries: json['affectedCountries'],
+        lastUpdated: DateTime.fromMillisecondsSinceEpoch(json['updated']));
   }
 }
