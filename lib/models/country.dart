@@ -19,7 +19,8 @@ class Country {
   factory Country.fromJSON(Map<String, dynamic> json) {
     return Country(
       name: json['country'],
-      countryInfo: json['countryInfo']['flag'],
+      countryInfo: json['countryInfo'][
+          'flag'], // if some item inside other json use this way to get parameter
       todayDeaths: json['todayDeaths'],
       critical: json['critical'],
       cases: json['cases'],
